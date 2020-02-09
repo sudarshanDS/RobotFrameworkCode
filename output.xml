@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200209 18:25:28.821" rpa="false">
+<suite id="s1" name="APIAutomation" source="C:\Users\amanpreet kaur\PycharmProjects\mobileautomation\APIAutomation.robot">
+<test id="s1-t1" name="run">
+<kw name="APIkeyword" library="ApiKeywords">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>baseURL</arg>
+<arg>${base_URL}</arg>
+</arguments>
+<msg timestamp="20200209 18:25:30.071" level="INFO">Creating Session using : alias=baseURL, url=https://maps.googleapis.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200209 18:25:30.071" endtime="20200209 18:25:30.071"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>maps/api/place/nearbysearch/json</arg>
+</arguments>
+<assign>
+<var>${resource}</var>
+</assign>
+<msg timestamp="20200209 18:25:30.086" level="INFO">${resource} = maps/api/place/nearbysearch/json</msg>
+<status status="PASS" starttime="20200209 18:25:30.086" endtime="20200209 18:25:30.086"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>key=AIzaSyD8-jgPzkd0s0WFFK71i7RiS8ZKsv9Ei64</arg>
+<arg>location=-33.8670522,151.1957362</arg>
+<arg>radius=1500</arg>
+</arguments>
+<assign>
+<var>${data}</var>
+</assign>
+<msg timestamp="20200209 18:25:30.086" level="INFO">${data} = {'key': 'AIzaSyD8-jgPzkd0s0WFFK71i7RiS8ZKsv9Ei64', 'location': '-33.8670522,151.1957362', 'radius': '1500'}</msg>
+<status status="PASS" starttime="20200209 18:25:30.086" endtime="20200209 18:25:30.086"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>Content-Type=application/json</arg>
+</arguments>
+<assign>
+<var>${header}</var>
+</assign>
+<msg timestamp="20200209 18:25:30.102" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20200209 18:25:30.102" endtime="20200209 18:25:30.102"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>baseURL</arg>
+<arg>${resource}</arg>
+<arg>params=${data}</arg>
+</arguments>
+<assign>
+<var>${requestvalue}</var>
+</assign>
+<msg timestamp="20200209 18:25:30.118" level="INFO">GET Request using : uri=maps/api/place/nearbysearch/json, params={'key': 'AIzaSyD8-jgPzkd0s0WFFK71i7RiS8ZKsv9Ei64', 'location': '-33.8670522,151.1957362', 'radius': '1500'}, allow_redirects=True, timeout=None
+headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+data=None 
+json=None</msg>
+<msg timestamp="20200209 18:25:31.024" level="INFO">c:\python37\lib\site-packages\urllib3\connectionpool.py:851: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecureRequestWarning)</msg>
+<msg timestamp="20200209 18:25:31.024" level="INFO">${requestvalue} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200209 18:25:30.102" endtime="20200209 18:25:31.024"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${requestvalue}</arg>
+</arguments>
+<msg timestamp="20200209 18:25:31.024" level="INFO">&lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200209 18:25:31.024" endtime="20200209 18:25:31.024"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${requestvalue.status_code}</arg>
+</arguments>
+<status status="PASS" starttime="20200209 18:25:31.024" endtime="20200209 18:25:31.039"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${requestvalue.content}</arg>
+</arguments>
+<msg timestamp="20200209 18:25:31.102" level="INFO">{
+   "html_attributions" : [],
+   "next_page_token" : "CqQCFQEAAF0nTsKXAofhopknV7UX3F6i4BEZ8nwuM1eoge8xq4aTwnKzlaYwaeA9yPkOhQb1NlgiTFSYGImWpT533ZoUbfKSG2G_yd_xgwNiesjH9QqlXbyg2zS1Lzf4l7r4X-mgIibqroQnzgPXCS6LItYAyBHu8f6wZ7Z_UQd-YESkwIb6d1qwPtp0wUir9isdB27rnXs2EJOP17_45HZhyZ8FNZjx82fUIHmcHNY5AWXEGYPHBjR0kyUqMRQzXK0mOv-SM4CEN9U7pI8KvRx5gh8lQKOQar2Qs-wj8UncTf8T7incaoiUI7NlRCZHJ-b0fszNr4g5GZfDnJRozyJt5vB31GSzE9Wz7RIr_GTOckCKUIXY8sD0_pBYRav9WWCWfbDYBxIQm3jBaiarenpufBPGXLy8yxoURhqYLHZrh_kXq7AFLhzqoirnSj8",
+   "results" : [
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8688197,
+               "lng" : 151.2092955
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.5781409,
+                  "lng" : 151.3430209
+               },
+               "southwest" : {
+                  "lat" : -34.118347,
+                  "lng" : 150.5209286
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "044785c67d3ee62545861361f8173af6c02f4fae",
+         "name" : "Sydney",
+         "photos" : [
+            {
+               "height" : 840,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/100027523742086369775\"\u003eHanna Gray\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAZtTUKhppZ03RXnGAs6h5WjduJjya67vfcDT49jC8NvrftNMiSw4ZKQbaS1WojThzoiI2ehrP53lig0DtEao2tSEV3DFEJRmfUc6xZXn85JPFLt3ISZrKxhCa6VrYikmaEhAZ8XhaUlwVa24635OmEwJHGhSLhsQC-TnfqXXKypPM2NZUUs7BMg",
+               "width" : 1260
+            }
+         ],
+         "place_id" : "ChIJP3Sa8ziYEmsRUKgyFmh9AQM",
+         "reference" : "ChIJP3Sa8ziYEmsRUKgyFmh9AQM",
+         "scope" : "GOOGLE",
+         "types" : [ "colloquial_area", "locality", "political" ],
+         "vicinity" : "Sydney"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8712578,
+               "lng" : 151.1979828
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8699088197085,
+                  "lng" : 151.1993317802915
+               },
+               "southwest" : {
+                  "lat" : -33.8726067802915,
+                  "lng" : 151.1966338197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "64725a86605e7682a694c5383338e95b8993b398",
+         "name" : "ibis Sydney Darling Harbour",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 4800,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/117979886491291086792\"\u003eibis Sydney Darling Harbour\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA8JqpwauQooGNGZTTNvi6iJ0vV_efcMMDPIPAZvp6atdF8KR0qAJgfUunbW8usmW2HcSdGBiocbyj435_cHCE6D4Cc2ArEqWmsarlFY3gNp0A8cm-xOyji9KwxoLjBEzWEhAKaDPQEsbE7-or5vG9jueJGhRaHm7LZKd6nS_8sUIDMCwWTSQhHA",
+               "width" : 7194
+            }
+         ],
+         "place_id" : "ChIJFfyzTTeuEmsRuMxvFyNRfbk",
+         "plus_code" : {
+            "compound_code" : "45HX+F5 Pyrmont, New South Wales, Australia",
+            "global_code" : "4RRH45HX+F5"
+         },
+         "rating" : 3.9,
+         "reference" : "ChIJFfyzTTeuEmsRuMxvFyNRfbk",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1727,
+         "vicinity" : "70 Murray Street, Pyrmont"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8722417,
+               "lng" : 151.1978693
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.87056166970849,
+                  "lng" : 151.1989685302915
+               },
+               "southwest" : {
+                  "lat" : -33.87325963029149,
+                  "lng" : 151.1962705697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "65b4e2f2160ff0205e95ae35b4940498cfd4df3e",
+         "name" : "Novotel Sydney on Darling Harbour",
+         "photos" : [
+            {
+               "height" : 2667,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106602118554831525058\"\u003eNovotel Sydney on Darling Harbour\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAbviB_KE56IftwXOgAjMDn1GOJ4apf5H_uVmhsyHdIzbxxwrL61PhEZmxyTHKLCpXpMxKF7HEe0Z-HxarYxTHP87X2V2En0T7x9-XXwCi2Ny49gCNVef1JbWeAF5sqNXMEhDNX_qjnbr3IbMmog-IjczFGhTDV436CiDM35_-OgzVkOM6NF0ICA",
+               "width" : 4000
+            }
+         ],
+         "place_id" : "ChIJzzIKkzCuEmsRivBgx7QS8t0",
+         "plus_code" : {
+            "compound_code" : "45HX+44 Pyrmont, New South Wales, Australia",
+            "global_code" : "4RRH45HX+44"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJzzIKkzCuEmsRivBgx7QS8t0",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 2747,
+         "vicinity" : "100 Murray Street, Pyrmont"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8741293,
+               "lng" : 151.1973586
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8724856197085,
+                  "lng" : 151.1987662302915
+               },
+               "southwest" : {
+                  "lat" : -33.8751835802915,
+                  "lng" : 151.1960682697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "3e51036953481cd4abce0ff461c4c0da17bd8e57",
+         "name" : "Oaks Goldsbrough Apartments",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3279,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112962946893275870819\"\u003eOaks Goldsbrough Apartments\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAUPT-gQCvwtmOBPLq3NOWbMWBUJUr3zZUzGBbNCQxoHOO0wEitPnbA2Pd8Phvx81OfDcjIzT499kWz5SJHP8buQaY_LYZiGsmpZglrazoHPUDzDT2eNG5AuJIFvF5RNdMEhBNmOsUTF1YDzcgbkGRbGerGhRtdoyM7WtxsfnO_F-uicVhLdIwuQ",
+               "width" : 4724
+            }
+         ],
+         "place_id" : "ChIJLfFKZjCuEmsRmrYDhBV-XCc",
+         "plus_code" : {
+            "compound_code" : "45GW+8W Pyrmont, New South Wales, Australia",
+            "global_code" : "4RRH45GW+8W"
+         },
+         "rating" : 3.7,
+         "reference" : "ChIJLfFKZjCuEmsRmrYDhBV-XCc",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1452,
+         "vicinity" : "243 Pyrmont Street, Darling Harbour"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.86896410000001,
+               "lng" : 151.2058908
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8674736197085,
+                  "lng" : 151.2070361802915
+               },
+               "southwest" : {
+                  "lat" : -33.8701715802915,
+                  "lng" : 151.2043382197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "ec8fbbbe1a0e32f65c9626ed17ef18f2ec1e4c09",
+         "name" : "The Grace Hotel",
+         "photos" : [
+            {
+               "height" : 4032,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104763502660999360441\"\u003eEdward Chia\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAGhYupI1coOg2GMlQIbX3cKlmaRQrhDcCu0PYVqhe0VbJNWmxlIX5bM2-Z5Wjer0pCjBR6bpC_7FoFUSWd4rMDNp7wioW6fRWdr-TVcVRA5YfL2D4JcyJS3V00p3kY5ObEhBsfsu_12A_OYxzvw82D-PXGhT5MLWIQUnw1YPyE2cCgPdA3KzB-Q",
+               "width" : 3024
+            }
+         ],
+         "place_id" : "ChIJnzcAQT-uEmsRHzT8I_C279w",
+         "plus_code" : {
+            "compound_code" : "46J4+C9 Sydney, New South Wales, Australia",
+            "global_code" : "4RRH46J4+C9"
+         },
+         "rating" : 4.3,
+         "reference" : "ChIJnzcAQT-uEmsRHzT8I_C279w",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1826,
+         "vicinity" : "77 York Street, Sydney"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8708902,
+               "lng" : 151.2074116
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8694774697085,
+                  "lng" : 151.2087807302915
+               },
+               "southwest" : {
+                  "lat" : -33.8721754302915,
+                  "lng" : 151.2060827697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "1bae6fa1958b706d4661b49edf75ef7622c1601a",
+         "name" : "QT Sydney",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2592,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106448891121100110732\"\u003eFlappy Chappy\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAbaumGB8kQrT9L_kOaZ7oTMIdf79AFU1GChknvK60iqhRB-BKFB5cwSNU9feCpAqim3ZmOEbr7KPm2MnKCXGTOESIcevn34wbt0bAmftxT8p7_nbmzU3nHTUz3gSngbtuEhCEV3JBDOkzWoCd5nXEKo_6GhR0DTOHo53KqNYauzmQQo4qOXYXDQ",
+               "width" : 1944
+            }
+         ],
+         "place_id" : "ChIJK6RwVT6uEmsRQ447JSUTGGI",
+         "plus_code" : {
+            "compound_code" : "46H4+JX Sydney, New South Wales, Australia",
+            "global_code" : "4RRH46H4+JX"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJK6RwVT6uEmsRQ447JSUTGGI",
+         "scope" : "GOOGLE",
+         "types" : [
+            "lodging",
+            "bar",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total" : 1233,
+         "vicinity" : "49 Market Street, Sydney"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8616709,
+               "lng" : 151.2069501
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8602904197085,
+                  "lng" : 151.2081339802915
+               },
+               "southwest" : {
+                  "lat" : -33.8629883802915,
+                  "lng" : 151.2054360197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "9a66b4367b0f4b0446d1c48be1003e24da2c8a2a",
+         "name" : "The Sebel Quay West Suites Sydney",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4938,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112345573789347374192\"\u003eThe Sebel Quay West Suites Sydney\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAW_Qa2gdTXtg-mCN4VSb8LF2ZF_5Jlj3agHhS5A0u1c8oPTl4-N6mZEH1bG08ur0S-M5Q4R3gAcQFxWf1UUeul3E_7zCPgJnPVDK-0VtxFyAezA9MjPE1NzGbqLYymwM1EhBKvB0LOAc-WznGDpr359fLGhTFz1JrIwXoGcqaj5u2KBuizidY8g",
+               "width" : 3292
+            }
+         ],
+         "place_id" : "ChIJu74YtEOuEmsRZVq9lNEs8vc",
+         "plus_code" : {
+            "compound_code" : "46Q4+8Q The Rocks, New South Wales, Australia",
+            "global_code" : "4RRH46Q4+8Q"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJu74YtEOuEmsRZVq9lNEs8vc",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 361,
+         "vicinity" : "98 Gloucester Street, The Rocks"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8748826,
+               "lng" : 151.2054823
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8734999697085,
+                  "lng" : 151.2067579302915
+               },
+               "southwest" : {
+                  "lat" : -33.8761979302915,
+                  "lng" : 151.2040599697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "fb4cc1d5d3dcd3f639c3e5b0f61cf5f0fb0c0a1a",
+         "name" : "Fraser Suites Sydney",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1365,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/100842108677306232853\"\u003eFraser Suites Sydney\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAlo9h_x0Lxl6IpPGvOPsccR2W02U7c9tXPt9X0FXS6PS55K-7lrxp3Jxa7APTBPzF5fqmevOjWoReY4f9qNpPjaxz0ArqpgaiYRmG-j55MOGROpeVuT-SkyIh9ueai6FjEhATcWcjdRWwlqhTN84tRjozGhQdLUHGTNamJNgwD_eXkmgYGvgKYw",
+               "width" : 2048
+            }
+         ],
+         "place_id" : "ChIJ0zxfbzyuEmsRYYkBoKdBTP4",
+         "plus_code" : {
+            "compound_code" : "46G4+25 Sydney, New South Wales, Australia",
+            "global_code" : "4RRH46G4+25"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJ0zxfbzyuEmsRYYkBoKdBTP4",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 599,
+         "vicinity" : "488 Kent Street, Sydney"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8615633,
+               "lng" : 151.2076032
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8602261697085,
+                  "lng" : 151.2091096302915
+               },
+               "southwest" : {
+                  "lat" : -33.8629241302915,
+                  "lng" : 151.2064116697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "2e3dec069aed3a50278a0f8556d7520d84d3c4e6",
+         "name" : "Four Seasons Sydney",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115345913782823736355\"\u003e\xec\x9d\xb4\xec\x9c\xa4\xed\x9d\xac\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAgNoKJmw7jC37dkOEx29FndQXl9hxowGu4mXY7sVA5dVQHT9ws5hIGPmBRqqDDApjDkRw_ShOWXyecPzy5awmKE6OD0QwT_dNpplScy-6WYRXgvOHAd0-Cncdn41PZdPfEhBKEZM3mm6TLaIP3TluUfXhGhRzG0VHST11o7KJUH18KQaXw5gAtA",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJZ934S0KuEmsR_0lxV3PTR4M",
+         "plus_code" : {
+            "compound_code" : "46Q5+92 The Rocks, New South Wales, Australia",
+            "global_code" : "4RRH46Q5+92"
+         },
+         "price_level" : 2,
+         "rating" : 4.5,
+         "reference" : "ChIJZ934S0KuEmsR_0lxV3PTR4M",
+         "scope" : "GOOGLE",
+         "types" : [ "spa", "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 3233,
+         "vicinity" : "199 George Street, The Rocks"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.873562,
+               "lng" : 151.2035868
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8721902697085,
+                  "lng" : 151.2048103302915
+               },
+               "southwest" : {
+                  "lat" : -33.8748882302915,
+                  "lng" : 151.2021123697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "743973412c053e3fc8cfbbbbecb3f7ec0fff155c",
+         "name" : "PARKROYAL Darling Harbour",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 667,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105995610146782714424\"\u003ePARKROYAL Darling Harbour\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA87tkVP3977z9c6Kw2lKyDUbNwRw3R2ME9Gto9zNjiEZirIxvuu7ge2WcuR9h3oOZt5NookQqhv8Qqshq0QKKIfM8ppk5Ivlr_ANgKHD4slBfwnppZegNyqz4KvB8GcAbEhBwaOSje6jyGo2vACzRQ9e4GhRGGP0nVK5humnzQUsVXZk-MpUyBA",
+               "width" : 1000
+            }
+         ],
+         "place_id" : "ChIJKR-RkzuuEmsR0IrnPnwUQRk",
+         "plus_code" : {
+            "compound_code" : "46G3+HC Sydney, New South Wales, Australia",
+            "global_code" : "4RRH46G3+HC"
+         },
+         "rating" : 4.3,
+         "reference" : "ChIJKR-RkzuuEmsR0IrnPnwUQRk",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1567,
+         "vicinity" : "150 Day Street, Sydney"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8759039,
+               "lng" : 151.2046731
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8746923197085,
+                  "lng" : 151.2060953302915
+               },
+               "southwest" : {
+                  "lat" : -33.8773902802915,
+                  "lng" : 151.2033973697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "cde5fa339d00e7749713fa75c0247ca39ea2ed56",
+         "name" : "Radisson Hotel and Suites Sydney",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4032,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111356110293422957876\"\u003eHeraldo Salzberg\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAAvfwSn9l2YeRlbwlmElZ3zIO10H6MKuXYn8Vy2Gc5s1gNSMZI_YFskTLqAU-zC5gq8rSgRD6gEr-madWt_z1kgUyZJJNCz8mtpoJPC6YXQiGZqCqMJFLDnouwMYOcq7HEhBX2Q3fcYuYHXmM7uOyvM6mGhSijT5_0JDK3LIpzbGeDA19Khxx1g",
+               "width" : 3024
+            }
+         ],
+         "place_id" : "ChIJ4fN7mzyuEmsRKZ3ylJxaUHg",
+         "plus_code" : {
+            "compound_code" : "46F3+JV Sydney, New South Wales, Australia",
+            "global_code" : "4RRH46F3+JV"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJ4fN7mzyuEmsRKZ3ylJxaUHg",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 546,
+         "vicinity" : "72 Liverpool Street, Sydney"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.859839,
+               "lng" : 151.20694
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8585390197085,
+                  "lng" : 151.2081862302915
+               },
+               "southwest" : {
+                  "lat" : -33.8612369802915,
+                  "lng" : 151.2054882697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "7d3e2ab50cdebb690452148cf8907b5d59ab657c",
+         "name" : "Sydney Harbour YHA - The Rocks",
+         "photos" : [
+            {
+               "height" : 750,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110772514696530762269\"\u003eSydney Harbour YHA - The Rocks\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA6RiQTBN-9Xb36sfCf454_plJEqWywzOX0JPH1A9b2AwZm4NtIoOmuDCNO4PjbH0PlzUMLGYCMpuwpDL_D9BYVdRZ0nW6GvURWrULF4bdrne5YD3CTtvgL_DImL6ZiRMlEhDerJAYdDtwbeIoAMOaZ0JuGhQhMohMHRI2F_mk5aVDMK9MspiwZg",
+               "width" : 1125
+            }
+         ],
+         "place_id" : "ChIJ7ROWBUOuEmsRxVKXiTS-KSo",
+         "plus_code" : {
+            "compound_code" : "46R4+3Q The Rocks, New South Wales, Australia",
+            "global_code" : "4RRH46R4+3Q"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJ7ROWBUOuEmsRxVKXiTS-KSo",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 773,
+         "vicinity" : "110 Cumberland Street, The Rocks"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8643922,
+               "lng" : 151.2063162
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8629931697085,
+                  "lng" : 151.2077041802915
+               },
+               "southwest" : {
+                  "lat" : -33.8656911302915,
+                  "lng" : 151.2050062197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "43d9e52705e06ef0e6ce0894c23747af85d24b4b",
+         "name" : "Amora Hotel Jamison Sydney",
+         "photos" : [
+            {
+               "height" : 4088,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112581335421444049471\"\u003eAmora Hotel Jamison Sydney\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAQxE-ckJPLXy38C5Y5w_udDijAuTJNwbq2czUYMEk4dssB3BthbCLF3iwGrsk_Mm_TcGVnpzd42PWsIOMcSKk8NPFe3Sa8sgnPoPYVSh-eU5Dcn7uz2Ekz13sxa7dSX7_EhD91DnUKbqx_BSa-1vBzQdYGhQk1INDxx4iJEN9KpIuq-nruE-NMw",
+               "width" : 3066
+            }
+         ],
+         "place_id" : "ChIJa51FEUGuEmsRIXRtDjLFQXM",
+         "plus_code" : {
+            "compound_code" : "46P4+6G Sydney, New South Wales, Australia",
+            "global_code" : "4RRH46P4+6G"
+         },
+         "price_level" : 3,
+         "rating" : 4.4,
+         "reference" : "ChIJa51FEUGuEmsRIXRtDjLFQXM",
+         "scope" : "GOOGLE",
+         "types" : [
+            "lodging",
+            "bar",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total" : 1652,
+         "vicinity" : "11 Jamison Street, Sydney"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8703417,
+               "lng" : 151.1979222
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.86900816970849,
+                  "lng" : 151.1991662802915
+               },
+               "southwest" : {
+                  "lat" : -33.87170613029149,
+                  "lng" : 151.1964683197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+         "id" : "e58f0f9ecaf15ab719d305b93265cafc00b01a3f",
+         "name" : "The Little Snail Restaurant",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 900,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114727320476039103791\"\u003eThe Little Snail Restaurant\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAwaL62mpSGNCy01mjqktqDWBKUQYffnq6jTeuoU6UMSv5Lxg-iI6id1zfOnL4MKabeDTjIRI7gKWPOMjLq1tk_ggsQRcmpqLXIUP6nxNImgipAhN9iYSBcRAkEh-SoDi3EhCwIqhdr4bgXrAWeKfJCIaTGhS-5-8U4N984aTcYrObLldqvbhHDw",
+               "width" : 1350
+            }
+         ],
+         "place_id" : "ChIJtwapWjeuEmsRcxV5JARHpSk",
+         "plus_code" : {
+            "compound_code" : "45HX+V5 Pyrmont, New South Wales, Australia",
+            "global_code" : "4RRH45HX+V5"
+         },
+         "price_level" : 2,
+         "rating" : 4.4,
+         "reference" : "ChIJtwapWjeuEmsRcxV5JARHpSk",
+         "scope" : "GOOGLE",
+         "types" : [ "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1166,
+         "vicinity" : "3/50 Murray Street, Pyrmont"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8686241,
+               "lng" : 151.2024054
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8673246697085,
+                  "lng" : 151.2037600302915
+               },
+               "southwest" : {
+                  "lat" : -33.87002263029149,
+                  "lng" : 151.2010620697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "0a488a9d494b6c7a58aa22834dfbd3ea8e3820af",
+         "name" : "Adina Apartment Hotel Sydney Darling Harbour",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2161,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110021075594600782126\"\u003eAdina Apartment Hotel Sydney Darling Harbour\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAJmUHFbEWDQvXfwQZx0C7xnyxMPb36asKfn-W5S72ItTMBl9nxId5qLHm8Lw_6Ct4l6GB-KBPByEcJsIS1vmVYZSkEt1hXlCXUfBrgntmSfZRUQgOCPgibloS5y4UKF6jEhD2-a2T2dBwJVH1vcAp8FTgGhSKw_fHu2FB-EMZAjhXzkCqWE-uEA",
+               "width" : 2879
+            }
+         ],
+         "place_id" : "ChIJGR6-6ziuEmsRY8y3i3SxKvY",
+         "plus_code" : {
+            "compound_code" : "46J2+HX Sydney, New South Wales, Australia",
+            "global_code" : "4RRH46J2+HX"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJGR6-6ziuEmsRY8y3i3SxKvY",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 401,
+         "vicinity" : "55 Shelley Street, Sydney"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8706577,
+               "lng" : 151.2073871
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8693581197085,
+                  "lng" : 151.2087383302915
+               },
+               "southwest" : {
+                  "lat" : -33.8720560802915,
+                  "lng" : 151.2060403697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "05d1f5b00c7a656ad3d2c9b8096b9577e056cea9",
+         "name" : "Hotel Swiss\xc3\xb4tel Sydney",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 683,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115934091270276185911\"\u003eHotel Swiss\xc3\xb4tel Sydney\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAxryFVslSAt-5aF83ufWAXVCOWxuKrkIQQ-acn3aWF2dQxw3aox9lVtjWPtfZoHCXCs4xgKKsGvPJrW1WDcHZo_zsPcMfJCwH7NjRjfvhu7WI10Va0DLqy4NMaqTEBnBXEhBiU-pohkgHXcoqqM7q7xtwGhR5QiBwpyanfoEO9Fve1HhNi2S59A",
+               "width" : 1024
+            }
+         ],
+         "place_id" : "ChIJAddzqj-uEmsRO8NmIaLn1t0",
+         "plus_code" : {
+            "compound_code" : "46H4+PX Sydney, New South Wales, Australia",
+            "global_code" : "4RRH46H4+PX"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJAddzqj-uEmsRO8NmIaLn1t0",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1777,
+         "vicinity" : "68 Market Street, Sydney"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8684714,
+               "lng" : 151.1953331
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8666417197085,
+                  "lng" : 151.1967944
+               },
+               "southwest" : {
+                  "lat" : -33.8693396802915,
+                  "lng" : 151.1931656
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "461d123aeb1c1648abdd5e535989d2bc518cf28e",
+         "name" : "The Star Grand Residences",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 645,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106711896502688882221\"\u003eThe Star Grand Residences (formerly Astral Residences)\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAmzNOedFlTWSEk7zKc-dzlgZq6VzeWDE-YD8Z4aJn4czSJNHEX3DomXPqZzRmhQavFBAlFuJoepqSpW-yRfPjV30o92VSBaDGvp-6rAqM1--hG6GSX7qCq0BWeXsBo45WEhDTLwC67QhFNOlPsVCh0KDSGhTZQpFrzavh_T174AjSnRP3lBCL7A",
+               "width" : 1024
+            }
+         ],
+         "place_id" : "ChIJq6qq6jauEmsR46KYci7M5Jc",
+         "plus_code" : {
+            "compound_code" : "45JW+J4 Pyrmont, New South Wales, Australia",
+            "global_code" : "4RRH45JW+J4"
+         },
+         "rating" : 4.3,
+         "reference" : "ChIJq6qq6jauEmsR46KYci7M5Jc",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 332,
+         "vicinity" : "80 Pyrmont Street, Pyrmont"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.859661,
+               "lng" : 151.208137
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.85830076970849,
+                  "lng" : 151.2093844802915
+               },
+               "southwest" : {
+                  "lat" : -33.86099873029149,
+                  "lng" : 151.2066865197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "4eb1c6eb8ec71a621f4d88e9aef77b0fce7ac304",
+         "name" : "Harbour Rocks Hotel Sydney - MGallery by Sofitel",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3628,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101403069384460404794\"\u003eHarbour Rocks Hotel Sydney - MGallery by Sofitel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA_gRKGIIoJDvwarK2P_XxEYy2iERtCmcyNORaWMUxbIltsQVZdibRqJVFUmgy9guLauoVptQZhXsxqyvMSoXfpQ_9gzgzOWxp0OQHbiOl-mTyHBcdlP0zlQMxgeOFrzeuEhC01YdpAzcPTgL3cFwImy12GhSkowVBG9t2VtB6v73TGghidUX3mA",
+               "width" : 7356
+            }
+         ],
+         "place_id" : "ChIJ1Y1n70KuEmsRYn_K2GHfatw",
+         "plus_code" : {
+            "compound_code" : "46R5+47 Sydney, New South Wales, Australia",
+            "global_code" : "4RRH46R5+47"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJ1Y1n70KuEmsRYn_K2GHfatw",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 334,
+         "vicinity" : "34 Harrington Street, Sydney"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.86536689999999,
+               "lng" : 151.2110157
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8641917697085,
+                  "lng" : 151.2122948802915
+               },
+               "southwest" : {
+                  "lat" : -33.8668897302915,
+                  "lng" : 151.2095969197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+         "id" : "1c3e95117b0a666f1667fedcbe3f37489a179c9b",
+         "name" : "Sofitel Sydney Wentworth",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4032,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106305272230543973088\"\u003eNicole Pettersson\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA4Kd3BnYJy3N7biVOjEacvY3VH8HHx3clZxIXKjgx01NHGfBZNHwOxbTaz8s5CO2rTYKUuPn5IyU2DZfuW_JIPwaaQhZl6QP6fxn0FqoHWW8qtdtUZ2dIzXG_NGx7ykpWEhCU6rKEDfbLtUFEfm8D_ygEGhQIx19feOa0yCd7XD0FQAsC6FjO6w",
+               "width" : 3024
+            }
+         ],
+         "place_id" : "ChIJOdOLbGquEmsR6oPJgVpzjxg",
+         "plus_code" : {
+            "compound_code" : "46M6+VC Sydney, New South Wales, Australia",
+            "global_code" : "4RRH46M6+VC"
+         },
+         "rating" : 4.3,
+         "reference" : "ChIJOdOLbGquEmsR6oPJgVpzjxg",
+         "scope" : "GOOGLE",
+         "types" : [ "lodging", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 2539,
+         "vicinity" : "61-101 Phillip Street, Sydney"
+      },
+      {
+         "geometry" : {
+            "location" : {
+               "lat" : -33.8688197,
+               "lng" : 151.2092955
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : -33.8561088,
+                  "lng" : 151.222951
+               },
+               "southwest" : {
+                  "lat" : -33.8797035,
+                  "lng" : 151.1970329
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+         "id" : "33e35d1925474acf2e3a2a509144aff306ef7962",
+         "name" : "Sydney",
+         "photos" : [
+            {
+               "height" : 500,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111232171267011000027\"\u003esam d\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAlUBVYnpU87lcR5SQ2ENJk8hDf5RqkV1fuiKlGVS1ufDOjM07erguum2JSvDaNdh37nObjkbCWRU2l5YXOtLbHiBG9PwzMHxsReVPD1OI6RlbSwy880LHDv10BHI3qIxiEhC5io9XKvgDSgWXqZXSj_WOGhTq3AcZ-CacoUSMySpmhOQMQm17Hw",
+               "width" : 800
+            }
+         ],
+         "place_id" : "ChIJP5iLHkCuEmsRwMwyFmh9AQU",
+         "reference" : "ChIJP5iLHkCuEmsRwMwyFmh9AQU",
+         "scope" : "GOOGLE",
+         "types" : [ "locality", "political" ],
+         "vicinity" : "Sydney"
+      }
+   ],
+   "status" : "OK"
+}
+</msg>
+<status status="PASS" starttime="20200209 18:25:31.039" endtime="20200209 18:25:31.102"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${requestvalue['results'][0]['name']}</arg>
+</arguments>
+<msg timestamp="20200209 18:25:31.118" level="FAIL">Resolving variable '${requestvalue['results'][0]['name']}' failed: TypeError: 'Response' object is not subscriptable</msg>
+<status status="FAIL" starttime="20200209 18:25:31.118" endtime="20200209 18:25:31.118"></status>
+</kw>
+<status status="FAIL" starttime="20200209 18:25:30.071" endtime="20200209 18:25:31.149"></status>
+</kw>
+<status status="FAIL" starttime="20200209 18:25:30.055" endtime="20200209 18:25:31.149" critical="yes">Resolving variable '${requestvalue['results'][0]['name']}' failed: TypeError: 'Response' object is not subscriptable</status>
+</test>
+<status status="FAIL" starttime="20200209 18:25:29.008" endtime="20200209 18:25:31.165"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="APIAutomation">APIAutomation</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200209 18:25:29.868" level="ERROR">Error in file 'C:\Users\amanpreet kaur\PycharmProjects\mobileautomation\APIAutomation.robot': Importing test library 'Time' failed: ModuleNotFoundError: No module named 'Time'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Python37\Scripts\robot.exe
+  c:\python37\python37.zip
+  c:\python37\DLLs
+  c:\python37\lib
+  c:\python37
+  c:\python37\lib\site-packages
+  c:\python37\lib\site-packages\win32
+  c:\python37\lib\site-packages\win32\lib
+  c:\python37\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20200209 18:25:30.039" level="ERROR">Error in file 'C:\Users\amanpreet kaur\PycharmProjects\mobileautomation\Keywords\ApiKeywords.robot': Importing test library 'Time' failed: ModuleNotFoundError: No module named 'Time'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Python37\Scripts\robot.exe
+  c:\python37\python37.zip
+  c:\python37\DLLs
+  c:\python37\lib
+  c:\python37
+  c:\python37\lib\site-packages
+  c:\python37\lib\site-packages\win32
+  c:\python37\lib\site-packages\win32\lib
+  c:\python37\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

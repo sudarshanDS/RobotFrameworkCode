@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="38c8c7a9-c033-4d39-a215-86f876a40164" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/APIAutomation.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Keywords/ApiKeywords.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Realdevice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appium-screenshot-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mobileAutomation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/001800e4-8121-4588-be72-405b98bfa68a-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/0361bdca-64d5-40cc-9c04-d15cb35324ef-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/0be339ec-6bc6-4652-a74c-6c3c3a2a7f27-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/2494336a-a9fd-4df0-8704-3858ec5a907e-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/280facaa-2e31-4706-9373-0b72493d862c-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/2b1f3478-f006-4315-aa83-3c58ccdef901-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/32ae6fb6-1175-4c11-af4c-46670e319a20-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/342480bc-4983-400a-a13b-e2de39a63501-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/34405564-7b2b-4fb2-a4a5-ef1cbc09e523-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/42da9121-7de1-4349-b49c-1cd7141fb23c-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/4aa7feea-b72b-46c9-8705-df4225af0e00-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/4fa15e10-675a-492c-934e-d538213d41b8-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/5bf0d056-0201-49d0-90e5-b5c12edfac08-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/6842c86b-64dd-4da6-b638-faa58280451a-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/8443c3ba-cad1-414d-920b-fba93a7a315b-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/9fc562a7-3403-49c8-b6c4-4e00e5d7bd88-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/b5eacc55-aee2-431f-91ad-8d92aac14e7b-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/b9cd652f-b803-4977-84e4-569953b58b84-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/c142ec43-b9eb-4772-84d4-9d0e9abf0f6e-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/c8bb51f5-482d-4c44-a8af-570abe7ca4d7-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/ca977995-e589-4be4-985f-6065fb1a0c19-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/d3a3b76e-6bc1-4aee-a193-e0df0b775c67-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/d3bf3197-17ee-4ed6-aaad-7c022d2af258-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/d564eaa8-a105-470d-85d9-cf687e80beb7-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/d6aee97d-a7d0-4e08-8d60-74c4a87cc3a3-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/da0c02a0-aa76-4e9d-abc2-1188a88811bd-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/e03ae9c0-7a18-420c-a4fa-5aa104b38c6a-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/allure/fe6e813d-c2a6-4d36-9f24-34ae2b3aa0c4-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/robotmobileAutomation.robot" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobileAutomation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robotmobileAutomation.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/APIAutomation.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#124#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Keywords/ApiKeywords.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#84#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Realdevice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Robot Keywords" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Realdevice.py" />
+        <option value="$PROJECT_DIR$/Robotmobileautomatio.robot" />
+        <option value="$PROJECT_DIR$/mobileAutomation.py" />
+        <option value="$PROJECT_DIR$/robotmobileAutomation.robot" />
+        <option value="$PROJECT_DIR$/Keywords/ApiKeywords.robot" />
+        <option value="$PROJECT_DIR$/APIAutomation.robot" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mobileautomation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mobileautomation" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\amanpreet kaur\PycharmProjects\mobileautomation" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.mobileAutomation">
+    <configuration name="Realdevice" type="PythonConfigurationType" factoryName="Python">
+      <module name="mobileautomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Realdevice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mobileAutomation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="mobileautomation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mobileAutomation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.mobileAutomation" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38c8c7a9-c033-4d39-a215-86f876a40164" name="Default Changelist" comment="" />
+      <created>1577549295471</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577549295471</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3878887" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Robotmobileautomatio.robot" />
+    <entry file="file://$PROJECT_DIR$/Realdevice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robotmobileAutomation.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobileAutomation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keywords/ApiKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/APIAutomation.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
