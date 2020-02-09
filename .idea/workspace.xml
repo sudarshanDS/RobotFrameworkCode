@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38c8c7a9-c033-4d39-a215-86f876a40164" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/APIAutomation.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Keywords/ApiKeywords.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Realdevice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appium-screenshot-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobileAutomation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/001800e4-8121-4588-be72-405b98bfa68a-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/0361bdca-64d5-40cc-9c04-d15cb35324ef-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/0be339ec-6bc6-4652-a74c-6c3c3a2a7f27-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/2494336a-a9fd-4df0-8704-3858ec5a907e-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/280facaa-2e31-4706-9373-0b72493d862c-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/2b1f3478-f006-4315-aa83-3c58ccdef901-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/32ae6fb6-1175-4c11-af4c-46670e319a20-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/342480bc-4983-400a-a13b-e2de39a63501-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/34405564-7b2b-4fb2-a4a5-ef1cbc09e523-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/42da9121-7de1-4349-b49c-1cd7141fb23c-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/4aa7feea-b72b-46c9-8705-df4225af0e00-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/4fa15e10-675a-492c-934e-d538213d41b8-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/5bf0d056-0201-49d0-90e5-b5c12edfac08-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/6842c86b-64dd-4da6-b638-faa58280451a-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/8443c3ba-cad1-414d-920b-fba93a7a315b-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/9fc562a7-3403-49c8-b6c4-4e00e5d7bd88-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/b5eacc55-aee2-431f-91ad-8d92aac14e7b-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/b9cd652f-b803-4977-84e4-569953b58b84-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/c142ec43-b9eb-4772-84d4-9d0e9abf0f6e-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/c8bb51f5-482d-4c44-a8af-570abe7ca4d7-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/ca977995-e589-4be4-985f-6065fb1a0c19-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/d3a3b76e-6bc1-4aee-a193-e0df0b775c67-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/d3bf3197-17ee-4ed6-aaad-7c022d2af258-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/d564eaa8-a105-470d-85d9-cf687e80beb7-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/d6aee97d-a7d0-4e08-8d60-74c4a87cc3a3-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/da0c02a0-aa76-4e9d-abc2-1188a88811bd-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/e03ae9c0-7a18-420c-a4fa-5aa104b38c6a-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/allure/fe6e813d-c2a6-4d36-9f24-34ae2b3aa0c4-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/robotmobileAutomation.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Keywords/ApiKeywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Keywords/ApiKeywords.robot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robotmobileAutomation.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="255">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -72,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/APIAutomation.robot">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -84,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Keywords/ApiKeywords.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="272">
+              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
               <folding>
                 <element signature="e#0#84#0" expanded="true" />
               </folding>
@@ -124,8 +88,8 @@
         <option value="$PROJECT_DIR$/Robotmobileautomatio.robot" />
         <option value="$PROJECT_DIR$/mobileAutomation.py" />
         <option value="$PROJECT_DIR$/robotmobileAutomation.robot" />
-        <option value="$PROJECT_DIR$/Keywords/ApiKeywords.robot" />
         <option value="$PROJECT_DIR$/APIAutomation.robot" />
+        <option value="$PROJECT_DIR$/Keywords/ApiKeywords.robot" />
       </list>
     </option>
   </component>
@@ -240,6 +204,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -269,16 +234,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robotmobileAutomation.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobileAutomation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -289,22 +244,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Keywords/ApiKeywords.robot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/APIAutomation.robot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
             <element signature="e#0#124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robotmobileAutomation.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keywords/ApiKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#84#0" expanded="true" />
           </folding>
         </state>
       </provider>

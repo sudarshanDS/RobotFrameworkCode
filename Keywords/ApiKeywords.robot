@@ -14,4 +14,4 @@ APIkeyword
     log    ${requestvalue}
     log to console    ${requestvalue.status_code}
     log   ${requestvalue.content}
-    log   ${requestvalue['results'][0]['name']}
+    #log   ${requestvalue['results'][0]['name']}
